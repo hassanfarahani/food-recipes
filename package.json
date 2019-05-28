@@ -1,0 +1,19 @@
+{
+  "name": "food-recipes",
+  "version": "1.0.0",
+  "description": "serach for food recipes",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "food-recipes"
+  },
+  "author": "Hassan Farahani",
+  "license": "ISC",
+  "homepage": "https://hassanfarahani.github.io/food-recipes",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
