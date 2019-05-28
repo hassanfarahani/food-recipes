@@ -1,0 +1,418 @@
+
+/* ---------Header-------- */
+header {
+  background: #000;
+  min-height: 200px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background.jpg);
+  background-attachment: fixed;
+  border-bottom: solid 8px #feca57;
+}
+
+header img {
+  padding-top: 1rem; 
+  width: 50%;
+  height: auto;
+}
+
+header h1 {
+  color:#fff;
+  padding-top: 0.8rem;
+}
+
+
+
+
+/* ---------Section-------- */
+
+.category-results {
+  border: solid 2px #ffebcc;
+  padding-left:0;
+  padding-right: 0;
+  background: #ffebcc;
+  /* box-shadow: 20px 2px 2px #ffebcc; */
+}
+
+/* ---------Section Category-------- */
+
+.category-list {
+  padding-right:0;
+  border-right: solid 2px #fff; 
+}
+
+section h4 {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+ul {
+  margin-top: 2rem;
+}
+
+.food-category {
+  border: none;
+}
+
+.food-category a {
+  color: #000;
+}
+
+.food-category a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+/* ---------Section Results link list-------- */
+
+.search-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.likes {
+position: relative;
+}
+
+.likes-field {
+  position: absolute;
+  cursor: pointer;
+  color: #ff9966;
+  font-size: 2rem;
+  top: 1.7rem;
+  right: 0;
+
+}
+
+.likes-panel {
+  position: absolute;
+  list-style: none;
+  top: 6rem;
+  left: 0;
+  background: #fff;
+  border: solid 2px #FBDB89;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s .2s;
+  text-align:center;
+  margin-bottom: 0;
+  }
+
+  .likes-panel:hover,
+  .likes-field:hover + .likes-panel {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .likes-list {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .likes-list li {
+    margin-bottom: 0;
+    border: solid 2px #FBDB89;
+    text-align: center;
+  }
+
+.likes-link {
+  width: 80%;
+  padding-right: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.category-meals-title {
+  padding-bottom: 1.9rem;
+  border-bottom: solid 2px #fff;
+  border-top: solid 2px #fff;
+}
+
+.meals-results {
+  padding-left: 0;
+  padding-right: 0;
+  border-right: solid 2px #fff; 
+}
+
+
+section ul {
+  list-style: none;
+}
+
+section .meals-list {
+  background: #ffebcc;
+  padding-left: 0;
+}
+
+
+section .results-link, .likes-link {
+  text-align: center; 
+  display: block;
+  align-items:center; 
+  opacity: 0.7;
+  transform: scale(0.9);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+section .results-link:hover, .likes-link:hover {
+  text-decoration: none;
+  opacity: 1;
+  transform: scale(0.97);
+  transform: translatex(2px);
+}
+
+.results-link--active {
+  background: #fff;
+}
+
+
+section img {
+  display: block;
+  border-radius: 50%;
+  width: 40%;
+  height: auto; 
+}
+
+section .results-data, .likes-data {
+  width: 150%;
+  height: auto;
+  color: #d35400;
+}
+
+section .result-list {
+  overflow: hidden;
+}
+
+.results-list {
+  margin-top: 0;
+}
+
+.results-list li {
+  margin-bottom: 0;
+}
+
+
+
+/* ---------Section Ingredients and Instruction-------- */
+
+.recipe {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.recipe-name {
+  padding-bottom: 1.9rem;
+  border-bottom: solid 2px #fff;
+  border-top: solid 2px #fff;
+}
+
+.ingredients-title {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.recipe-ingredient-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.recipe img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 1rem auto 1rem auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #000;
+}
+
+.recipe-icon {
+  padding-left: 0.5rem;
+}
+
+.recipe-steps {
+  padding-left: 0.5rem;
+  padding-right: 2.5rem;
+}
+
+
+
+/* Loader */
+
+.loader {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.loader svg {
+  width: 4em;
+  height: 4em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: #ff9966;
+  transform-origin: 50% 50%;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+
+/* buttons */
+
+.button-lg {
+  background-image: linear-gradient(to right bottom, #FBDB89, #ff9999);
+  border-radius: 3rem;
+  border: none;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 3rem;
+}
+
+.button-sm {
+  background-image: linear-gradient(to right bottom, #FBDB89, #ff9999);
+  border-radius: 3rem;
+  border: none;
+  text-transform: lowercase;
+  color: #fff;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 5rem;
+  height: auto;
+}
+
+.button-link {
+  background-image: linear-gradient(to right bottom, #FBDB89, #ff9999);
+  border-radius: 3rem;
+  border: none;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto 0 auto;
+  padding: 1rem;
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.button-link:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.input {
+  width: 50%;
+  height: 3rem;
+  border: 1px solid #FBDB89;
+  border-radius: 3rem ;
+  padding-left: 1rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #FBDB89;
+}
+
+.search-input {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+
+.button svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: #000;
+}
+
+.results__btn--prev {
+  float: left;
+  flex-direction: row-reverse; 
+}
+
+.results__btn--next {
+  float: right; 
+}
+
+/* --------- Youtube link -------*/
+.wrapper-link {
+  text-align: center;
+  height: 4rem;
+}
+
+/* ------ Likes Icon ----- */
+.recipe-love {
+  position: absolute;
+  background-image: linear-gradient(to right bottom, #FBDB89, #ff9999);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  top: 14rem;
+  left: 3rem;  
+  transition: all 0.5s;
+}
+
+.recipe-love:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+.recipe-love:focus {
+  outline: none;
+}
+
+.recipe-love i {
+  color: #fff;
+}
+
+
+
+.copyright {
+  color: #968B87;
+  font-size: 1.2rem;
+  margin-top: auto; 
+  text-align: center;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* -------------------------- media queries ------------------------- */
+
+@media(max-width: 481px) {
+  .input {
+    width: 95%;
+  }
+
+  .likes-panel:active,
+  .likes-field:active + .likes-panel {
+    visibility: visible;
+    opacity: 1;
+  }
+}
